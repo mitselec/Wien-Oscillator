@@ -1,0 +1,148 @@
+
+**** 03/01/13 12:54:48 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Tranal"  [ E:\OrCad\Proj\WienOsc\wien-schematic1-tranal.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "wien-schematic1-tranal.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 160ms 150ms 0.01ms 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\wien-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING wien-SCHEMATIC1.net ****
+* source WIEN
+D_D1         N03458 V1 D1N4148 
+C_C2         V1 N02364  150n  
+V_V3         0 N00841 9Vdc
+D_D2         V1 N03458 D1N4148 
+V_V4         N00877 0 9Vdc
+R_R1         0 N00396  1k  
+R_R2         V1 N00396  2.2k  
+R_R3         0 V2  1k  
+X_U2A         V2 N00396 N00877 N00841 V1 TL082
+R_R4         N02364 V2  1k  
+R_R5         N00396 N03458  18k  
+C_C1         0 V2  150n  
+
+**** RESUMING wien-schematic1-tranal.sim.cir ****
+.END
+
+**** 03/01/13 12:54:48 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Tranal"  [ E:\OrCad\Proj\WienOsc\wien-schematic1-tranal.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U2A.dx        X_U2A.dy        
+          IS    2.682000E-09  800.000000E-18  800.000000E-18 
+           N    1.836                                        
+         ISR    1.565000E-09                                 
+         IKF     .04417                                      
+          BV  100                                            
+         IBV  100.000000E-06                                 
+          RS     .5664          1               1.000000E-03 
+          TT   11.540000E-09                                 
+         CJO    4.000000E-12                   10.000000E-12 
+          VJ     .5                                          
+           M     .3333                                       
+
+
+**** 03/01/13 12:54:48 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Tranal"  [ E:\OrCad\Proj\WienOsc\wien-schematic1-tranal.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.jx        
+               NJF             
+         VTO   -1            
+        BETA  984.200000E-06 
+          IS    2.500000E-12 
+
+
+**** 03/01/13 12:54:48 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Tranal"  [ E:\OrCad\Proj\WienOsc\wien-schematic1-tranal.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V1)-52.39E-06  (   V2) 14.31E-09  (N00396)-16.37E-06 (N00841)   -9.0000     
+
+(N00877)    9.0000 (N02364) 14.31E-09 (N03458)-16.48E-06 (X_U2A.6) 8.886E-09    
+
+(X_U2A.7)-53.21E-06                   (X_U2A.8)-53.21E-06                       
+
+(X_U2A.9)    0.0000                   (X_U2A.10)     .6546                      
+
+(X_U2A.11)    8.6541                  (X_U2A.12)    8.6541                      
+
+(X_U2A.53)    7.5000                  (X_U2A.54)   -7.5000                      
+
+(X_U2A.90)-16.38E-06                  (X_U2A.91)   50.0000                      
+
+(X_U2A.92)  -50.0000                  (X_U2A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.134E-03
+    V_V4        -1.135E-03
+    X_U2A.vb     8.886E-14
+    X_U2A.vc     7.501E-12
+    X_U2A.ve     8.185E-12
+    X_U2A.vlim  -1.638E-08
+    X_U2A.vlp   -5.000E-11
+    X_U2A.vln   -5.001E-11
+
+    TOTAL POWER DISSIPATION   2.04E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            1.11
+

@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-Tranal"  [ E:\OrCad\Proj\WienOsc\wien-schematic1-tranal.sim ] 
+
+** Creating circuit file "wien-schematic1-tranal.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 160ms 150ms 0.01ms 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\wien-SCHEMATIC1.net" 
+
+
+.END

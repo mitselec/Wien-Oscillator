@@ -1,0 +1,13 @@
+* source WIEN
+D_D1         N03458 V1 D1N4148 
+C_C2         V1 N02364  150n  
+V_V3         0 N00841 9Vdc
+D_D2         V1 N03458 D1N4148 
+V_V4         N00877 0 9Vdc
+R_R1         0 N00396  1k  
+R_R2         V1 N00396  2.2k  
+R_R3         0 V2  1k  
+X_U2A         V2 N00396 N00877 N00841 V1 TL082
+R_R4         N02364 V2  1k  
+R_R5         N00396 N03458  18k  
+C_C1         0 V2  150n  
